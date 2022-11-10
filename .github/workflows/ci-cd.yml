@@ -17,6 +17,6 @@ jobs:
       - name: Docker Login
         run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build Docker Image
-        run: docker build -t pallada1985/quizlite .
+        run: docker build -t pallada1985/quizlite:$(date +%Y%m%d).
       - name: Push to Dockerhub
         run: docker push pallada1985/quizlite
